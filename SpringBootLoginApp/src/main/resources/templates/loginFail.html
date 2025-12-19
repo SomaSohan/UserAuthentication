@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Result</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Poppins, sans-serif;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fade 1s ease-in-out;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(-20px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    .box {
+        width: 400px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        color: #003f9e;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 15px;
+        background: #0072ff;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background: #003f9e;
+        transform: scale(1.05);
+    }
+</style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- Change this text from backend -->
+        <h1>Login Failed!</h1>
+        <!-- OR -->
+        <!-- <h1 style="color:red;">Wrong Details! Login Failed</h1> -->
+
+    </div>
+</body>
+</html>

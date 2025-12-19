@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            animation: bgAnimation 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes bgAnimation {
+            0% { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+            100% { background: linear-gradient(135deg, #2575fc, #6a11cb); }
+        }
+
+        .container {
+            background: white;
+            width: 350px;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #2575fc;
+            border-radius: 6px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a11cb;
+            box-shadow: 0px 0px 6px rgba(106, 17, 203, 0.5);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 35px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            background: #2575fc;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #6a11cb;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Verify User with OTP</h2>
+
+        <form action="/verifyotp" method="post">
+            <input type="text" name="otp" placeholder="Enter OTP" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
